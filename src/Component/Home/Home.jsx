@@ -1,14 +1,23 @@
 import React from "react";
-import banner2 from "../..//assets/pexels1-chan-walrus-958545.jpg";
+import Banner from "./Banner/Banner";
+import { useLoaderData } from "react-router-dom";
+import Chef from "./Chef/Chef";
 
 const Home = () => {
+  const chef = useLoaderData();
+  //console.log(chef);
   return (
-    <div>
-      <div className=" bg-black">
-        <img className="" src={banner2} alt="" />
-      </div>
-      <div className="my-10">
-        <h2 className="text-3xl font-semibold text-center">Our Best Chef</h2>
+    <div className="container">
+      <Banner></Banner>
+      <div>
+        <div className="my-10">
+          <h2 className="text-3xl font-semibold text-center">Our Best Chefs</h2>
+        </div>
+        <div className="grid grid-cols-3 mx-5 gap-10 ">
+          {chef.map((c) => (
+            <Chef c={c} key={c.id}></Chef>
+          ))}
+        </div>
       </div>
     </div>
   );
