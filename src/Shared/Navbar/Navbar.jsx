@@ -28,7 +28,6 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <Link to="/">Home</Link>
-              <Link to="/recipe">Recipe</Link>
               <Link to="/blog">Blog</Link>
             </ul>
           </div>
@@ -40,10 +39,6 @@ const Navbar = () => {
           <div>
             <Link className="mx-5 text-black" to="/">
               Home
-            </Link>
-
-            <Link className="mx-5 text-black" to="/recipe">
-              Recipe
             </Link>
             <Link className="mx-5 text-black" to="/blog">
               Blog
