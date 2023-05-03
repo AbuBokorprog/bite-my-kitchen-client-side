@@ -62,6 +62,26 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <div className="container px-20">
+        <div className="my-20 flex justify-center gap-14 items-center">
+          <div>
+            <p className="text-xl rounded-xl text-white text-center font-medium bg-black py-32 px-4">
+              “A recipe has no soul. You, as the cook, must bring soul to the
+              recipe.”
+              <p className="">
+                <small> Thomas Keller</small>
+              </p>
+            </p>
+          </div>
+          <div>
+            <img
+              className="w-full rounded-xl"
+              src="https://img.freepik.com/free-photo/side-view-pilaf-with-stewed-beef-meat-plate_141793-5057.jpg?size=626&ext=jpg&ga=GA1.1.825737080.1674060681&semt=ais"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

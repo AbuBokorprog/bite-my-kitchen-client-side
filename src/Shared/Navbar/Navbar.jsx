@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="container px-20 rounded-xl">
       <div className="navbar py-4 bg-orange-300">
         <div className="navbar-start">
           <div className="dropdown">

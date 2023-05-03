@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="container px-20 rounded-2xl">
       <div className="bg-black">
         <div className="carousel relative bg-black carousel-center rounded-box">
           <div className="carousel-item">
