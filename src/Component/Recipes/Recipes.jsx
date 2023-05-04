@@ -14,7 +14,7 @@ const Recipes = () => {
     <div className="container px-20">
       <div className="my-20 bg-green-400 rounded-xl">
         <div className="card h-80  lg:card-side  shadow-2xl">
-          <img className="w-96" src={picture} alt="Album" />
+          <img className="w-96 rounded-xl" src={picture} alt="Album" />
           <div className="card-body w-80">
             <h2 className="card-title">{name}</h2>
             <p>Description: {description}</p>
