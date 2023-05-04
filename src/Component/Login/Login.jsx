@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { FaFacebook, FaGithub, FaArrowRight } from "react-icons/fa";
+import { FaGoogle, FaGithub, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { user, loginUser } = useContext(AuthContext);
+  const { user, loginUser, googleSignIn } = useContext(AuthContext);
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -26,6 +26,16 @@ const Login = () => {
         console.log(error.message);
         setError(error.message);
         setSuccess();
+      });
+  };
+
+  const GoogleLoggedIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((error) => {
+        console.log(error.message);
       });
   };
 
@@ -80,8 +90,8 @@ const Login = () => {
                 <small>or sign up using</small>
               </p>
               <div className="flex justify-center gap-4">
-                <button className="rounded-2xl">
-                  <FaFacebook className="text-2xl text-blue-500"></FaFacebook>
+                <button onClick={GoogleLoggedIn} className="rounded-2xl">
+                  <FaGoogle className="text-2xl text-blue-500"></FaGoogle>
                 </button>
                 <button className="rounded-2xl">
                   <FaGithub className="text-2xl"></FaGithub>

@@ -13,9 +13,17 @@ const Register = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    const displayName = form.displayName;
-    const Photo = form.image.value;
-    createUser(email, password, displayName, Photo)
+    const displayName = form.displayName.value;
+    const photoURL = form.photoURL.value;
+    console.log(displayName);
+    // update(displayName, photoURL)
+    //   .then(() => {
+    //     //profile update
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    createUser(email, password)
       .then((loggedUser) => {
         const user = loggedUser.user;
         console.log(user);
@@ -50,7 +58,7 @@ const Register = () => {
                 </label>
                 <input
                   type="text"
-                  name="name"
+                  name="displayName"
                   placeholder="Your Name"
                   className="input input-bordered"
                   required
@@ -86,8 +94,8 @@ const Register = () => {
                 </label>
                 <input
                   type="file"
-                  name="image"
-                  placeholder="image"
+                  name="photoURL"
+                  placeholder="photoURL"
                   className="input input-bordered"
                   required
                 />

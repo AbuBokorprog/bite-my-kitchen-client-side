@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="container px-20 rounded-xl">
       <div className="navbar py-4 bg-orange-300">
