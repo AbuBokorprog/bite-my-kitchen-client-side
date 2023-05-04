@@ -16,7 +16,7 @@ const Chef = ({ c }) => {
           <p>Numbers of recipes: {numRecipes}</p>
           <p>Likes: {likes}</p>
           <div className="card-actions my-3 justify-end">
-            <Link className="mx-auto" to={`/:${id}`}>
+            <Link className="mx-auto" to={`${id}`}>
               <button className="btn btn-primary text-center">
                 View Recipes
               </button>

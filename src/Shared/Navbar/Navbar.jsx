@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -46,7 +47,13 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-end">
-          <Link className="btn text-black bg-gradient-to-r from-red-200 via-purple-200 to-pink-200">
+          <Link className="mr-5">
+            <FaUserAlt />
+          </Link>
+          <Link
+            to="/login"
+            className="btn text-black bg-gradient-to-r from-red-200 via-purple-200 to-pink-200"
+          >
             Login
           </Link>
         </div>
