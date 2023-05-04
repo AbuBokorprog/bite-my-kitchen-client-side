@@ -33,6 +33,8 @@ const Navbar = () => {
             >
               <Link to="/">Home</Link>
               <Link to="/blog">Blog</Link>
+              <Link to="/">Home</Link>
+              <Link to="/blog">Blog</Link>
             </ul>
           </div>
           <Link className="btn btn-ghost normal-case text-xl">
@@ -41,6 +43,12 @@ const Navbar = () => {
         </div>
         <div className="navbar-center lg:flex justify-around items-center">
           <div>
+            <Link className="mx-5 text-black" to="/">
+              Home
+            </Link>
+            <Link className="mx-5 text-black" to="/blog">
+              Blog
+            </Link>
             <Link className="mx-5 text-black" to="/">
               Home
             </Link>

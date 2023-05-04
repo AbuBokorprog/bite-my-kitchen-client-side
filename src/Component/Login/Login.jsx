@@ -112,7 +112,7 @@ const Login = () => {
             <div className="text-center my-5">
               <p>Create Account</p>
               <div className="flex justify-center items-center gap-3">
-                <Link to="/register">Sign up</Link>
+                <Link to="/register">Register</Link>
                 <FaArrowRight className="text-blue-500"></FaArrowRight>
               </div>
             </div>
