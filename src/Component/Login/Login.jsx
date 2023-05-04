@@ -1,12 +1,16 @@
 import React, { useContext, useState } from "react";
 import { FaGoogle, FaGithub, FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
   const { user, loginUser, googleSignIn, githubSignIn } =
     useContext(AuthContext);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   //console.log(createUser);
@@ -22,6 +26,8 @@ const Login = () => {
         console.log(user);
         setSuccess("successfully logged in");
         setError();
+        form.reset;
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error.message);

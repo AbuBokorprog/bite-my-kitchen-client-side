@@ -18,12 +18,15 @@ const AuthProvider = ({ children }) => {
   const GithubProvider = new GithubAuthProvider();
   const auth = getAuth(app);
   const [user, setUser] = useState();
+  const [loader, setLoader] = useState();
 
   const createUser = (email, password) => {
+    setLoader(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const loginUser = (email, password) => {
+    setLoader(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -39,33 +42,28 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       //console.log(currentUser);
       setUser(currentUser);
-      //setLoader(false);
+      setLoader(false);
     });
     return () => {
       unsubscribe();
     };
   }, []);
 
-  // const update = (displayName, photoURL) => {
-  //   return updateProfile(auth.currentUser, {
-  //     displayName: displayName,
-  //     photoURL: photoURL,
-  //   });
-  // };
+  const logOut = () => {
+    return signOut(auth);
+  };
 
-  // const uuser = auth.currentUser;
-
-  // if (uuser !== null) {
-  //   user.providerData.forEach((profile) => {
-  //     console.log("Sign-in provider: " + profile.providerId);
-  //     console.log("  Provider-specific UID: " + profile.uid);
-  //     console.log("  Name: " + profile.displayName);
-  //     console.log("  Email: " + profile.email);
-  //     console.log("  Photo URL: " + profile.photoURL);
-  //   });
-  // }
-
-  const AuthInfo = { user, createUser, githubSignIn, loginUser, googleSignIn };
+  const uuser = auth.currentUser;
+  //console.log(photo);
+  const AuthInfo = {
+    user,
+    createUser,
+    githubSignIn,
+    loginUser,
+    googleSignIn,
+    loader,
+    logOut,
+  };
 
   return (
     <div>

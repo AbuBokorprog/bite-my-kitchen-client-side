@@ -10,7 +10,7 @@ const Main = () => {
       <Navbar></Navbar>
       <div className="text-center">
         {navigation.state === "loading" && (
-          <div className="radial-progress" style={{ "--value": 100 }}>
+          <div className="radial-progress my-52" style={{ "--value": 100 }}>
             100%
           </div>
         )}

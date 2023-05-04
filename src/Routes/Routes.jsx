@@ -9,6 +9,7 @@ import Login from "../Component/Login/Login";
 import Register from "../Component/Register/Register";
 import AllRecipes from "../Component/AllRecipes/AllRecipes";
 import About from "../Component/About/About";
+import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/recipes",
-        element: <AllRecipes></AllRecipes>,
+        element: (
+          <PrivateRoute>
+            <AllRecipes></AllRecipes>
+          </PrivateRoute>
+        ),
         loader: () =>
           fetch(
             `https://bite-my-kitchen-jgkjx6xmk-abubokorprog.vercel.app/recipes`
@@ -34,7 +39,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/:id",
-        element: <Recipes></Recipes>,
+        element: (
+          <PrivateRoute>
+            <Recipes></Recipes>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(
             `https://bite-my-kitchen-jgkjx6xmk-abubokorprog.vercel.app/chef/${params.id}`
