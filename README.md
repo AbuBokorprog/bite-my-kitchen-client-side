@@ -1,8 +1,11 @@
 ### \_Bite My Kitchen
 
+# website important things:
+
 - indian delicious dishes.
 - best chefs.
-- Chefs details and each chefs best dishes.
+- Chefs details and each chefs have best dishes.
+- Your favorite dish select so easily.
 - You want to know how to cooked this dishes and dishes ingredients.
 
 # Website resource and important link:

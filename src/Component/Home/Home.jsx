@@ -11,7 +11,7 @@ const Home = () => {
       <div>
         <Banner></Banner>
       </div>
-      <div className="my-20 mx-20 bg-red-200 py-10 rounded-3xl">
+      <div className="my-20 lg:mx-20 bg-red-200 py-10 rounded-3xl">
         <h4 className="mb-3 text-slate-500 text-center">Our Story</h4>
         <h2 className="text-3xl font-semibold text-center">About Us</h2>
         <p className="my-5 mx-10">
@@ -39,7 +39,7 @@ const Home = () => {
             enjoy bringing it to you!
           </small>
         </p>
-        <div className="flex mt-10 mx-auto justify-center gap-10">
+        <div className="lg:flex sm:flex-col mt-10 mx-auto justify-center lg:gap-10">
           <img
             className="w-96 rounded-2xl"
             src="https://img.freepik.com/free-photo/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table_141793-4757.jpg?size=626&ext=jpg&ga=GA1.1.825737080.1674060681&semt=ais"
@@ -56,14 +56,14 @@ const Home = () => {
         <div className="my-20">
           <h2 className="text-3xl font-semibold text-center">Our Best Chefs</h2>
         </div>
-        <div className="grid grid-cols-3 mx-16 gap-5 ">
+        <div className="grid lg:grid-cols-3 lg:mx-16 gap-5 ">
           {chef.map((c) => (
             <Chef c={c} key={c.id}></Chef>
           ))}
         </div>
       </div>
       <div className="container px-20">
-        <div className="my-20 flex justify-center gap-14 items-center">
+        <div className="my-20 lg:flex sm:flex-col justify-center gap-14 items-center">
           <div>
             <p className="text-xl rounded-xl text-white text-center font-medium bg-black py-32 px-4">
               “A recipe has no soul. You, as the cook, must bring soul to the

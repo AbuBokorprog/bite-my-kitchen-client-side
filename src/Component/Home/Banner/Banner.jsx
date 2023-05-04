@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="container px-20 rounded-2xl">
+    <div className="container lg:px-20 rounded-2xl">
       <div className="bg-black">
         <div className="carousel relative bg-black carousel-center rounded-box">
           <div className="carousel-item">
@@ -32,9 +32,9 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-80 text-center">
+      <div className="absolute lg:top-80 top-52 text-center">
         <h1 className="text-5xl text-slate-300 font-bold">The Best Dishes</h1>
-        <p className="text-slate-100 font-semibold mt-3 mx-52">
+        <p className="text-slate-100 font-semibold mt-3 lg:mx-52">
           Our service of best dishes offers a mouth-watering selection of
           delectable cuisine to suit any taste. From classic comfort food to
           exotic flavors, we have something for everyone to enjoy.

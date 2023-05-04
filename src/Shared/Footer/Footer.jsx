@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="container px-20 ">
+    <div className="container lg:px-20 ">
       <div className=" bg-orange-200 rounded-xl py-16 text-center">
-        <div className="flex gap-3 font-medium justify-center items-center">
+        <div className="lg:flex sm:flex-col gap-3 font-medium justify-center items-center">
           <p>Dhaka, Mirpur-2</p>
           <p>0378-3432</p>
           <p>bitemykitchen@gmail.com</p>

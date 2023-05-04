@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container px-20 rounded-xl">
+    <div className="container lg:px-20 rounded-xl">
       {loader ? (
         <div className="radial-progress" style={{ "--value": 100 }}>
           100%
@@ -63,24 +63,24 @@ const Navbar = () => {
               Bite My Kitchen
             </Link>
           </div>
-          <div className="navbar-center lg:flex justify-around items-center">
-            <div className="mx-5">
-              <ActiveLink to="/" className="mx-5 text-black">
+          <div className="navbar-center hidden lg:flex justify-around">
+            <div className="sm:mx-auto lg:mx-5">
+              <ActiveLink to="/" className=" text-black">
                 Home
               </ActiveLink>
             </div>
-            <div className="mx-5">
-              <ActiveLink className="mx-5 text-black" to="/blog">
+            <div className="sm:mx-auto lg:mx-5">
+              <ActiveLink className=" text-black" to="/blog">
                 Blog
               </ActiveLink>
             </div>
-            <div className="mx-5">
-              <ActiveLink className="mx-5 text-black" to="/recipes">
+            <div className="sm:mx-auto lg:mx-5">
+              <ActiveLink className=" text-black" to="/recipes">
                 Recipes
               </ActiveLink>
             </div>
-            <div className="mx-5">
-              <ActiveLink className="mx-5 text-black" to="/about">
+            <div className="sm:mx-auto lg:mx-5">
+              <ActiveLink className=" text-black" to="/about">
                 About
               </ActiveLink>
             </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
           <div className="navbar-end">
             {user ? (
               <img
-                className={`w-10 rounded-3xl mr-4`}
+                className={`w-10 rounded-3xl lg:mr-4`}
                 src={pt}
                 alt=""
                 title={n}
