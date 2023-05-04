@@ -19,18 +19,26 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/chef`),
+        loader: () =>
+          fetch(
+            `https://bite-my-kitchen-jgkjx6xmk-abubokorprog.vercel.app/chef`
+          ),
       },
       {
         path: "/recipes",
         element: <AllRecipes></AllRecipes>,
-        loader: () => fetch(`http://localhost:5000/recipes`),
+        loader: () =>
+          fetch(
+            `https://bite-my-kitchen-jgkjx6xmk-abubokorprog.vercel.app/recipes`
+          ),
       },
       {
         path: "/:id",
         element: <Recipes></Recipes>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chef/${params.id}`),
+          fetch(
+            `https://bite-my-kitchen-jgkjx6xmk-abubokorprog.vercel.app/chef/${params.id}`
+          ),
       },
       {
         path: "/blog",
