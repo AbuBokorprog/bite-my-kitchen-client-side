@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { user, loginUser, googleSignIn } = useContext(AuthContext);
+  const { user, loginUser, googleSignIn, githubSignIn } =
+    useContext(AuthContext);
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -31,6 +32,16 @@ const Login = () => {
 
   const GoogleLoggedIn = () => {
     googleSignIn()
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  const githubLoggedIn = () => {
+    githubSignIn()
       .then((result) => {
         const user = result.user;
       })
@@ -93,7 +104,7 @@ const Login = () => {
                 <button onClick={GoogleLoggedIn} className="rounded-2xl">
                   <FaGoogle className="text-2xl text-blue-500"></FaGoogle>
                 </button>
-                <button className="rounded-2xl">
+                <button onClick={githubLoggedIn} className="rounded-2xl">
                   <FaGithub className="text-2xl"></FaGithub>
                 </button>
               </div>
