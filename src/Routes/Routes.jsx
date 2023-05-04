@@ -7,6 +7,8 @@ import Recipes from "../Component/Recipes/Recipes";
 import Blogs from "../Component/Blogs/Blogs";
 import Login from "../Component/Login/Login";
 import Register from "../Component/Register/Register";
+import AllRecipes from "../Component/AllRecipes/AllRecipes";
+import About from "../Component/About/About";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,11 @@ const router = createBrowserRouter([
         loader: () => fetch(`http://localhost:5000/chef`),
       },
       {
+        path: "/recipes",
+        element: <AllRecipes></AllRecipes>,
+        loader: () => fetch(`http://localhost:5000/recipes`),
+      },
+      {
         path: "/:id",
         element: <Recipes></Recipes>,
         loader: ({ params }) =>
@@ -28,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
       {
         path: "/login",
