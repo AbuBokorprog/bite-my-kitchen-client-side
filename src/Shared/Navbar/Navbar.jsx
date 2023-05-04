@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import ActiveLink from "../../ActiveLink/ActiveLink";
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
@@ -31,10 +32,10 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <Link to="/">Home</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/">Home</Link>
-              <Link to="/blog">Blog</Link>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/blog">Blog</NavLink>
+              <NavLink to="/recipes">Recipes</NavLink>
+              <NavLink to="/about">About</NavLink>
             </ul>
           </div>
           <Link className="btn btn-ghost normal-case text-xl">
@@ -42,19 +43,25 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center lg:flex justify-around items-center">
-          <div>
-            <Link className="mx-5 text-black" to="/">
+          <div className="mx-5">
+            <ActiveLink to="/" className="mx-5 text-black">
               Home
-            </Link>
-            <Link className="mx-5 text-black" to="/blog">
+            </ActiveLink>
+          </div>
+          <div className="mx-5">
+            <ActiveLink className="mx-5 text-black" to="/blog">
               Blog
-            </Link>
-            <Link className="mx-5 text-black" to="/">
-              Home
-            </Link>
-            <Link className="mx-5 text-black" to="/blog">
-              Blog
-            </Link>
+            </ActiveLink>
+          </div>
+          <div className="mx-5">
+            <ActiveLink className="mx-5 text-black" to="/recipes">
+              Recipes
+            </ActiveLink>
+          </div>
+          <div className="mx-5">
+            <ActiveLink className="mx-5 text-black" to="/about">
+              About
+            </ActiveLink>
           </div>
         </div>
         <div className="navbar-end">
