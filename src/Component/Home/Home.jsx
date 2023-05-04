@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "./Banner/Banner";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import Chef from "./Chef/Chef";
 
 const Home = () => {
