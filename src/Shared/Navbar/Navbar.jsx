@@ -6,7 +6,7 @@ import ActiveLink from "../../ActiveLink/ActiveLink";
 
 const Navbar = () => {
   const { user, loader, logOut } = useContext(AuthContext);
-  console.log(user);
+  //console.log(user);
   let pt = "";
   let n = "";
   if (user) {

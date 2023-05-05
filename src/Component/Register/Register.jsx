@@ -2,9 +2,10 @@ import React, { useContext, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-  const { user, createUser } = useContext(AuthContext);
+  const { createUser, update } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   //console.log(createUser);
@@ -15,14 +16,7 @@ const Register = () => {
     const password = form.password.value;
     const displayName = form.displayName.value;
     const photoURL = form.photoURL.value;
-    console.log(displayName);
-    // update(displayName, photoURL)
-    //   .then(() => {
-    //     //profile update
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
+
     createUser(email, password)
       .then((loggedUser) => {
         const user = loggedUser.user;

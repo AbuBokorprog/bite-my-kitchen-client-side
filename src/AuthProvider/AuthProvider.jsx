@@ -52,10 +52,15 @@ const AuthProvider = ({ children }) => {
   const logOut = () => {
     return signOut(auth);
   };
-
-  const uuser = auth.currentUser;
+  const User = auth.currentUser;
+  const update = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: "name",
+    });
+  };
   //console.log(photo);
   const AuthInfo = {
+    update,
     user,
     createUser,
     githubSignIn,
