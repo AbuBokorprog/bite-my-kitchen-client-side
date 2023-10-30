@@ -39,7 +39,7 @@ const Home = () => {
             enjoy bringing it to you!
           </small>
         </p>
-        <div className="flex mt-10 mx-auto justify-center lg:gap-10">
+        <div className="lg:flex mx-auto items-center justify-center lg:gap-10">
           <img
             className="w-96 rounded-2xl"
             src="https://img.freepik.com/free-photo/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table_141793-4757.jpg?size=626&ext=jpg&ga=GA1.1.825737080.1674060681&semt=ais"
@@ -62,10 +62,10 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="container px-20">
-        <div className="my-20 flex justify-center lg:gap-14 items-center">
+      <div className="container mx-auto lg:px-20">
+        <div className="my-20 lg:flex justify-center gap-14 items-center">
           <div>
-            <p className="text-xl rounded-xl text-white text-center font-medium bg-black lg:py-32 lg:px-4">
+            <p className="text-xl w-full rounded-xl text-white text-center font-medium bg-black lg:py-32 lg:px-4">
               “A recipe has no soul. You, as the cook, must bring soul to the
               recipe.”
               <p className="">
