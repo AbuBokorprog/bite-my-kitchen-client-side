@@ -41,12 +41,12 @@ const Home = () => {
         </p>
         <div className="lg:flex mx-auto items-center justify-center lg:gap-10">
           <img
-            className="w-96 rounded-2xl"
+            className="h-96 rounded-2xl"
             src="https://img.freepik.com/free-photo/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table_141793-4757.jpg?size=626&ext=jpg&ga=GA1.1.825737080.1674060681&semt=ais"
             alt=""
           />
           <img
-            className="w-96 rounded-2xl"
+            className="h-96 rounded-2xl"
             src="https://img.freepik.com/free-photo/delicious-indian-food-tray-flat-lay_23-2148723508.jpg?size=626&ext=jpg&ga=GA1.1.825737080.1674060681&semt=ais"
             alt=""
           />
