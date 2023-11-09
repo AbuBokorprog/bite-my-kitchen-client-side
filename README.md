@@ -15,7 +15,7 @@
 ```sh
 Live-Link: https://bite-my-kitchen-jgkjx6xmk-abubokorprog.vercel.app
 
-Github-Link: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-AbuBokorprog
+Github-Link: https://github.com/AbuBokorprog/chef-savvy-project-server-side
 ```
 
 <!-- //public ------>
@@ -25,5 +25,5 @@ Github-Link: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-
 ```sh
 Live-Link: http://localhost:5173/
 
-Github-link: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-AbuBokorprog
+Github-link: https://github.com/AbuBokorprog/chef-savvy-project-client-side
 ```
